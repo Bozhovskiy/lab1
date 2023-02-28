@@ -24,7 +24,7 @@ class Train {
 }
 
 let Passengers = [
-    new Passenger('Roman', 1, 12389), new Passenger('Ylia', 2, 86976),
+    new Passenger('Roman', 1, 12389), new Passenger('Petro', 2, 86976),
     new Passenger('Arsen', 21, 12343), new Passenger('Andrii', undefined, 876434)];
 
 let Tickets = [
@@ -163,12 +163,12 @@ findTrain(Trains[3]);
 // Покупка пасажиром квитка на потяг
 console.log('\nПокупка пасажиром квитка на потяг');
 
-let byeTicket = (pass, ticket) => {
+let buyTicket = (pass, ticket) => {
     pass.ticket = ticket.number;
     console.log(`Пасажир ${pass.name} купує квиток № ${pass.ticket}`)
 };
 
-byeTicket(Passengers[3], Tickets[5]);
+buyTicket(Passengers[3], Tickets[5]);
 
 // Зміна квитка із одного потяга на інший
 console.log('\nЗміна квитка із одного потяга на інший');
@@ -186,8 +186,8 @@ changeTicket(Passengers[2], Tickets[0]);
 console.log('\nСкасування покупки квитка');
 let cancelTicket = (pass) => {
     let oldTicket = pass.ticket;
-    if (oldTicket === undefined) console.log(`Пасажир ${pass.name} ітак не має квитка!!!`)
-    else console.log(`Пасажир ${pass.name} відміняє квиток № ${oldTicket}!!!`)
+    if (oldTicket === undefined) console.log(`Пасажир ${pass.name} не має квитка1`)
+    else console.log(`Пасажир ${pass.name} відміняє квиток № ${oldTicket}1`)
 };
 
 cancelTicket(Passengers[0]);
